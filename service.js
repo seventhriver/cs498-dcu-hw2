@@ -5,8 +5,12 @@ const datastore = new Datastore();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("ping");
+});
+
 app.get("/greeting", (req, res) => {
-  res.send("<h1>Hello World!</h1>");
+  res.send("Hello World!");
 });
 
 app.post("/register", async (req, res) => {
